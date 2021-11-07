@@ -20,14 +20,12 @@ const templList = [
   },
   {
     name: "vite-react-redux-router-ts-templ",
-    value: "123123",
+    value: "git clone https://github.com/liuyongjin/pure_admin.git",
   },
 ];
 
 // 初始化
 function init() {
-  console.log(chalk.green("success"));
-  return;
   // 注册版本命令
   program
     .version(pkg.version, "-v, --version")
@@ -70,13 +68,6 @@ function init() {
         }
       });
     });
-
-  // program
-  //   .command('create <template-name> <project-name>')
-  //   .description('create a new project from a template')
-  //   .action((templateName, projectName, cmd) => {
-  //     console.log(templateName, projectName, cmd)
-  //   });
 
   // commander解析参数
   program.parse(process.argv);
