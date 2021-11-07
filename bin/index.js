@@ -10,17 +10,15 @@ const pkg = require("../package.json");
 // const argv = require("minimist")(process.argv.slice(3));
 const program = new Command();
 const cliName = Object.keys(pkg.bin)[0];
-chalk.enabled = true;
-// console.log(cliName);
 
 const templList = [
   {
     name: "webpack-react-redux-router-ts-templ",
-    value: "git clone https://github.com/liuyongjin/pure_admin.git",
+    value: "git clone https://github.com/liuyongjin/react-redux-ts-tmpl.git",
   },
   {
     name: "vite-react-redux-router-ts-templ",
-    value: "git clone https://github.com/liuyongjin/pure_admin.git",
+    value: "git clone https://github.com/liuyongjin/react-redux-ts-tmpl.git",
   },
 ];
 
@@ -47,12 +45,11 @@ function init() {
     .command("create")
     .description("create a new project from a template")
     .action(async () => {
-      // console.log(templateName, projectName, cmd);
       const { action } = await inquirer.prompt([
         {
           name: "action",
           type: "list",
-          message: "选择模板？",
+          message: "select templ?",
           choices: templList,
         },
       ]);
@@ -64,10 +61,14 @@ function init() {
           console.log(stdout);
           console.log(stderr);
         } else {
-          console.log(chalk.green("success"));
+          console.log(chalk.green("done"));
         }
       });
     });
+
+  program.on("command:*", function (cmd) {
+    console.log(chalk.red(`unknow command ${cmd.join("")}`));
+  });
 
   // commander解析参数
   program.parse(process.argv);
