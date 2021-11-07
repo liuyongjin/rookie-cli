@@ -1,10 +1,11 @@
 {
-  "name": "@rookie/rookie-cli",
+  "name": "@liuyongjin/carry-cli",
   "version": "1.0.0",
-  "description": "rookie-cli",
+  "description": "carry-cli",
+  "main": "./bin/index.js",
   "scripts": {},
   "bin": {
-    "rookie-cli": "./bin/index.js"
+    "carry-cli": "./bin/index.js"
   },
   "keywords": [],
   "author": "lyj",
@@ -15,5 +16,14 @@
     "fs-extra": "^10.0.0",
     "inquirer": "^8.2.0",
     "minimist": "^1.2.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyongjin/rookie-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyongjin/rookie-cli/issues"
+  },
+  "homepage": "https://github.com/liuyongjin/rookie-cli#readme"
 }
