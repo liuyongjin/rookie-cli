@@ -1,0 +1,20 @@
+{
+  "name": "@rookie/rookie-cli",
+  "version": "1.0.0",
+  "description": "rookie-cli",
+  "private": true,
+  "scripts": {},
+  "bin": {
+    "rookie-cli": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "lyj",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "minimist": "^1.2.5"
+  }
+}
